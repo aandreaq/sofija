@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Софија Тадић - позивница</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+<div id="snow"></div>
+
+
+<section class="hero">
+
+    <div class="hero-img">
+        <img src="images/download (1).jpg" alt="Frozen">
+    </div>
+
+    <div class="hero-text">
+        <h1>Софијина пета рођенданска авантура</h1>
+        <p>
+           Добродошли на сајт посвећен Софијином петом рођендану. Овде ћете пронаћи све информације о датуму,
+            времену, месту прославе, плану активности, као и мале напомене за родитеље како би славље било безбрижно и весело.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="program">
+
+    <h2>Програм</h2>
+
+    <div class="program-grid">
+
+        <div class="card">
+            <img src="images/olaf1.jpg" alt="">
+            <h3>Долазак и одлазак</h3>
+            <p>21. јун од 14:30ч до 17:00ч</p>
+        </div>
+
+        <div class="card">
+            <img src="images/olaf2.jpg" alt="">
+            <h3>Локација</h3>
+            <p>Играоница Грифон</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="rsvp">
+
+    <div class="form">
+
+        <h2>Потврда</h2>
+
+        <input type="text" id="ime" placeholder="Име и презиме">
+        <input type="email" id="email" placeholder="Email">
+
+        <label>Да ли долазите?</label>
+        <div class="radio">
+            <label><input type="radio" name="come" value="Да"> Да</label>
+            <label><input type="radio" name="come" value="Не"> Не</label>
+        </div>
+
+        <textarea id="poruka" placeholder="Ваша порука (опционо)"></textarea>
+
+        <button onclick="sendViber()">Пошаљи</button>
+
+    </div>
+
+    <div class="rsvp-img">
+        <img src="images/frozen alsa and anna.jpg" alt="">
+    </div>
+
+</section>
+<script src="script.js"></script>
+</body>
+</html>

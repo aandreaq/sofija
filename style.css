@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef7ff, #fde2ff);
+}
+
+
+#snow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.9;
+    animation: fall linear infinite;
+    text-shadow: 0 0 8px #b3e5fc, 0 0 12px #f8bbd0;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+    align-items: center;
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    border-bottom: 3px solid #f8bbd0;
+}
+
+.hero-img img {
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(186, 104, 200, 0.3);
+}
+
+.hero-text h1 {
+    color: #6a1b9a;
+    font-size: 32px;
+    text-shadow: 0 0 10px #f8bbd0;
+}
+
+
+.program {
+    padding: 50px;
+    text-align: center;
+    background: #f3e5f5;
+}
+
+.program h2 {
+    color: #6a1b9a;
+    text-shadow: 0 0 8px #f8bbd0;
+}
+
+.program-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #fce4ec);
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 8px 20px rgba(106, 27, 154, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* RSVP */
+.rsvp {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+    background: linear-gradient(135deg, #e1f5fe, #fce4ec);
+}
+
+.form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(186, 104, 200, 0.2);
+}
+
+input, textarea {
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #f8bbd0;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #ba68c8;
+    box-shadow: 0 0 8px #f8bbd0;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(135deg, #6a1b9a, #f06292);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(240, 98, 146, 0.4);
+}
+
+.rsvp-img img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(186, 104, 200, 0.25);
+}
