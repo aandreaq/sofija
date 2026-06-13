@@ -14,22 +14,3 @@ function snow() {
 
 setInterval(snow, 400);
 
-
-function sendViber() {
-    const ime = document.getElementById("ime").value;
-    const email = document.getElementById("email").value;
-    const poruka = document.getElementById("poruka").value;
-
-    const dolazak = document.querySelector('input[name="come"]:checked')?.value;
-
-    const text =
-        "RSVP poruka:%0A" +
-        "Ime: " + ime + "%0A" +
-        "Email: " + email + "%0A" +
-        "Dolazak: " + dolazak + "%0A" +
-        "Poruka: " + poruka;
-
-    const broj = "381600900014"; 
-
-    window.open("viber://chat?number=" + broj + "&text=" + text, "_blank");
-}
