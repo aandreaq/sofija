@@ -138,3 +138,48 @@ button:hover {
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(186, 104, 200, 0.25);
 }
+
+@media (max-width: 768px) {
+
+   
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+  
+    .program-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 300px;
+    }
+
+ 
+    .rsvp {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .rsvp-img img {
+        width: 100%;
+        max-width: 300px;
+    }
+}

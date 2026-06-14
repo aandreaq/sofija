@@ -15,21 +15,41 @@ function snow() {
 setInterval(snow, 400);
 
 
-function sendViber() {
+function sendForm() {
+
     const ime = document.getElementById("ime").value;
     const email = document.getElementById("email").value;
     const poruka = document.getElementById("poruka").value;
 
     const dolazak = document.querySelector('input[name="come"]:checked')?.value;
 
-    const text =
-        "RSVP poruka:%0A" +
-        "Ime: " + ime + "%0A" +
-        "Email: " + email + "%0A" +
-        "Dolazak: " + dolazak + "%0A" +
-        "Poruka: " + poruka;
 
-    const broj = "381600900014"; 
+    if (!ime || !dolazak) {
+        alert("Molimo popunite ime i izaberite da li dolazite ❄️");
+        return;
+    }
 
-    window.open("viber://chat?number=" + broj + "&text=" + text, "_blank");
+
+    fetch("https://script.google.com/macros/s/AKfycbxrTdF7IC9eAGSsyf94iiisEucS2PObzsbh3rnR9AhTvYjLBEBR5DBp8NO3rEIiEPo/exec", {
+        method: "POST",
+        body: JSON.stringify({
+            ime: ime,
+            email: email,
+            dolazak: dolazak,
+            poruka: poruka
+        })
+    })
+    .then(() => {
+
+        alert("Hvala na potvrdi! ❄️💙");
+
+        document.getElementById("ime").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("poruka").value = "";
+
+    })
+    .catch(() => {
+        alert("Došlo je do greške, pokušajte ponovo.");
+    });
+
 }
